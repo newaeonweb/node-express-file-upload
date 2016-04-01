@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', index.render);
 app.get('/users', users.render);
 // Image came from input name field on post form
-app.post('/upload', upload.single('image'), uploader.post);
+app.post('/upload', upload.single('image'), uploader.uploadImage);
 
 
 // catch 404 and forward to error handler
